@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureFilesTest", "AzureFilesTest\AzureFilesTest.ccproj", "{8A5F90C7-C5C9-4EC0-A108-5F824CD48ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFilesBrowser", "AzureFilesBrowser\AzureFilesBrowser.csproj", "{416F9FE5-DCFE-4066-886E-55EAC8FFB4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFilesBrowser.ShareMounter", "AzureFilesBrowser.ShareMounter\AzureFilesBrowser.ShareMounter.csproj", "{2C3F4CD5-E07C-4DEB-BC8A-5B6AA05E6CAA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AzureFilesBrowser.VBShareMounter", "AzureFilesBrowser.VBShareMounter\AzureFilesBrowser.VBShareMounter.vbproj", "{DD94C2F8-F067-4694-852C-165584182D0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B45E319-8ACD-4F4B-AA9D-CDB0CFA325D5}"
+	ProjectSection(SolutionItems) = preProject
+		DeploySample.ps1 = DeploySample.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{91C1130B-40D3-464F-96C1-86A2223000E8}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A5F90C7-C5C9-4EC0-A108-5F824CD48ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5F90C7-C5C9-4EC0-A108-5F824CD48ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5F90C7-C5C9-4EC0-A108-5F824CD48ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5F90C7-C5C9-4EC0-A108-5F824CD48ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{416F9FE5-DCFE-4066-886E-55EAC8FFB4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416F9FE5-DCFE-4066-886E-55EAC8FFB4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416F9FE5-DCFE-4066-886E-55EAC8FFB4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416F9FE5-DCFE-4066-886E-55EAC8FFB4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3F4CD5-E07C-4DEB-BC8A-5B6AA05E6CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3F4CD5-E07C-4DEB-BC8A-5B6AA05E6CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3F4CD5-E07C-4DEB-BC8A-5B6AA05E6CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3F4CD5-E07C-4DEB-BC8A-5B6AA05E6CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD94C2F8-F067-4694-852C-165584182D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD94C2F8-F067-4694-852C-165584182D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD94C2F8-F067-4694-852C-165584182D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD94C2F8-F067-4694-852C-165584182D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

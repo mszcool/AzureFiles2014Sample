@@ -1,0 +1,87 @@
+﻿@model AzureFilesBrowser.Models.FileShareDataModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="jumbotron">
+        <h1>Azure Files in Web/Worker Roles</h1>
+        <p class="lead">This demo shows, how to work with Azure Files in PaaS Web/Worker Roles.</p>
+    </div>
+    <div class="row">
+        <div class="form-horizontal">
+            <h2>Mount the share</h2>
+            <p>Please enter the data for your file share and mount it to read its contents and display it below!</p>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ShareName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ShareName /*, new { htmlAttributes = new { @class = "form-control" } }*/)
+                    @Html.ValidationMessageFor(model => model.ShareName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserName /*, new { htmlAttributes = new { @class = "form-control" } }*/)
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(model => model.Password /*, new { htmlAttributes = new { @class = "form-control" } }*/)
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>File Share Mount Results</h2>
+        <p>Please view the result of mounting the share below. If all went well, click the button to show the files and directories of the root.</p>
+        <p>@Html.DisplayFor(model => model.MountResult)</p>
+    </div>
+    
+    <div class="row">
+        <h2>File Share Contents (root-level only for simplicity)</h2>
+        <table class="table">
+            <tr>
+                <th>
+                    Content Name
+                </th>
+                <th>
+                    Type of Content
+                </th>
+                <th></th>
+            </tr>
+
+            @if (Model != null && Model.FileShareContents != null)
+            {
+                foreach (var item in Model.FileShareContents)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContentName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContentType)
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+    </div>
+}
